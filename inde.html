@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Personal Website</title>
+
+  <style>
+
+    /* CSS Variables for easy light/dark mode switching */
+
+    :root {
+
+      --bg-color: #f8f9fa;
+
+      --card-bg: #ffffff;
+
+      --text-color: #212529;
+
+      --primary-color: #2563eb;
+
+      --primary-hover: #1d4ed8;
+
+      --border-color: #e5e7eb;
+
+    }
+
+
+    [data-theme="dark"] {
+
+      --bg-color: #0f172a;
+
+      --card-bg: #1e293b;
+
+      --text-color: #f8fafc;
+
+      --primary-color: #3b82f6;
+
+      --primary-hover: #60a5fa;
+
+      --border-color: #334155;
+
+    }
+
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    }
+
+
+    body {
+
+      background-color: var(--bg-color);
+
+      color: var(--text-color);
+
+      line-height: 1.6;
+
+      transition: background-color 0.3s, color 0.3s;
+
+    }
+
+
+    /* Header & Navigation */
+
+    header {
+
+      max-width: 900px;
+
+      margin: 0 auto;
+
+      padding: 2rem 1.5rem 1rem;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+    }
+
+
+    .logo {
+
+      font-size: 1.25rem;
+
+      font-weight: 700;
+
+    }
+
+
+    .theme-toggle {
+
+      background: none;
+
+      border: 1px solid var(--border-color);
+
+      color: var(--text-color);
+
+      padding: 0.5rem 1rem;
+
+      border-radius: 8px;
+
+      cursor: pointer;
+
+      font-size: 0.9rem;
+
+    }
+
+
+    .theme-toggle:hover {
+
+      border-color: var(--primary-color);
+
+    }
+
+
+    /* Hero Section */
+
+    .hero {
+
+      max-width: 900px;
+
+      margin: 2rem auto;
+
+      padding: 0 1.5rem;
+
+      text-align: center;
+
+    }
+
+
+    .hero h1 {
+
+      font-size: 2.5rem;
+
+      margin-bottom: 1rem;
+
+    }
+
+
+    .hero p {
+
+      font-size: 1.1rem;
+
+      opacity: 0.8;
+
+      max-width: 600px;
+
+      margin: 0 auto 1.5rem;
+
+    }
+
+
+    .btn {
+
+      display: inline-block;
+
+      background-color: var(--primary-color);
+
+      color: #ffffff;
+
+      padding: 0.75rem 1.5rem;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      font-weight: 600;
+
+      transition: background-color 0.2s;
+
+    }
+
+
+    .btn:hover {
+
+      background-color: var(--primary-hover);
+
+    }
+
+
+    /* Features Grid */
+
+    .features {
+
+      max-width: 900px;
+
+      margin: 3rem auto;
+
+      padding: 0 1.5rem;
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      gap: 1.5rem;
+
+    }
+
+
+    .card {
+
+      background-color: var(--card-bg);
+
+      border: 1px solid var(--border-color);
+
+      padding: 1.5rem;
+
+      border-radius: 12px;
+
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    }
+
+
+    .card h3 {
+
+      margin-bottom: 0.5rem;
+
+      font-size: 1.1rem;
+
+    }
+
+
+    .card p {
+
+      font-size: 0.95rem;
+
+      opacity: 0.85;
+
+    }
+
+
+    /* Footer */
+
+    footer {
+
+      max-width: 900px;
+
+      margin: 4rem auto 2rem;
+
+      padding: 1.5rem;
+
+      text-align: center;
+
+      font-size: 0.85rem;
+
+      opacity: 0.7;
+
+      border-top: 1px solid var(--border-color);
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="logo">MyWebsite</div>
+
+    <button class="theme-toggle" id="themeBtn">🌙 Dark Mode</button>
+
+  </header>
+
+
+  <!-- Main Hero Section -->
+
+  <main>
+
+    <section class="hero">
+
+      <h1>Welcome to My Simple Website</h1>
+
+      <p>This is a clean, responsive single-page template built with pure HTML, CSS, and JavaScript. You can edit this text to make it your own!</p>
+
+      <a href="#contact" class="btn">Get in Touch</a>
+
+    </section>
+
+
+    <!-- Content Grid -->
+
+    <section class="features">
+
+      <div class="card">
+
+        <h3>⚡ Fast Loading</h3>
+
+        <p>Built with minimal code, ensuring near-instant load times on any browser or connection.</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>📱 Responsive</h3>
+
+        <p>Looks great automatically across desktop computers, tablets, and mobile devices.</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>🎨 Customizable</h3>
+
+        <p>Easily tweak colors, layout, and fonts directly inside the CSS stylesheet block.</p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p id="contact">&copy; <span id="year"></span> My Website. Built and hosted for free.</p>
+
+  </footer>
+
+
+  <!-- JavaScript for Interactivity -->
+
+  <script>
+
+    // Set current year in footer dynamically
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    // Dark Mode Toggle Logic
+
+    const themeBtn = document.getElementById('themeBtn');
+
+   
+
+    themeBtn.addEventListener('click', () => {
+
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+
+     
+
+      if (currentTheme === 'dark') {
+
+        document.documentElement.removeAttribute('data-theme');
+
+        themeBtn.textContent = '🌙 Dark Mode';
+
+      } else {
+
+        document.documentElement.setAttribute('data-theme', 'dark');
+
+        themeBtn.textContent = '☀️ Light Mode';
+
+      }
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>
